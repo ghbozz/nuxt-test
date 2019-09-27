@@ -31,6 +31,9 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.2);
   }
 
   .left-content {
