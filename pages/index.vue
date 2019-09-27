@@ -1,12 +1,13 @@
 <template>
-  <div class="container">
-
-  </div>
+  <app-banner></app-banner>
 </template>
 
 <script>
+import Banner from '@/components/banner.vue'
 export default {
-
+  components: {
+    appBanner: Banner
+  }
 }
 </script>
 
