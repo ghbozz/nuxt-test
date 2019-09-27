@@ -56,7 +56,7 @@ export default {
   }
 
   .button-box {
-    margin-top: 15px;
+    margin-top: 25px;
     width: 100%;
     text-align: center;
   }

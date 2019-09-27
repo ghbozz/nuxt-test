@@ -2,7 +2,7 @@
   <section class="section is-medium">
     <div class="container-fluid">
       <div class="features-background">
-        <div class="columns is-mobile is-multiline">
+        <div class="columns is-mobile is-multiline is-vcentered">
           <div v-for="(plan, i) in plans" :key="i" class="column"><app-card :plan="plan"></app-card></div>
         </div>
       </div>
@@ -39,5 +39,10 @@ export default {
   .column {
     display: flex;
     justify-content: center;
+  }
+
+  .columns :nth-child(2) .my-card {
+    width: 380px;
+    height: 530px;
   }
 </style>
