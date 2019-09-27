@@ -1,12 +1,17 @@
 <template>
-  <app-banner></app-banner>
+  <div>
+    <app-banner></app-banner>
+    <app-features></app-features>
+  </div>
 </template>
 
 <script>
-import Banner from '@/components/banner.vue'
+import Banner from '@/components/Banner.vue'
+import Features from '@/components/Features.vue'
 export default {
   components: {
-    appBanner: Banner
+    appBanner: Banner,
+    appFeatures: Features
   }
 }
 </script>
