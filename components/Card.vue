@@ -1,10 +1,10 @@
 <template>
   <div class="my-card">
     <div class="top-card">
-      <span class="feature-price">25€</span>
+      <span class="feature-price">{{ plan.price }}€</span>
     </div>
     <div class="bottom-card">
-      <h4 class="feature-title title">Feature Title</h4>
+      <h4 class="feature-title title">{{ plan.name }}</h4>
       <p class="feature-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nemo nostrum, quasi cumque, tenetur iste porro, minus natus neque, nisi quisquam facere rerum quos architecto.</p>
       <div class="button-box">
         <a href="#" class="btn feature-btn">Buy now</a>
@@ -12,6 +12,12 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: ['plan']
+}
+</script>
 
 <style scoped>
   .my-card {
@@ -36,6 +42,11 @@
 
   .feature-price {
     font-size: 3em;
+    font-weight: bolder;
+  }
+
+  .feature-title {
+    text-transform: uppercase;
   }
 
   .bottom-card {
@@ -68,6 +79,9 @@
 
   .btn:hover {
     transform: translateY(-5px);
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
   }
 
   .btn::after {

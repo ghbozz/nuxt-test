@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="features-background">
         <div class="columns is-mobile is-multiline">
-          <div v-for="i in 3" :key="i" class="column"><app-card></app-card></div>
+          <div v-for="(plan, i) in plans" :key="i" class="column"><app-card :plan="plan"></app-card></div>
         </div>
       </div>
     </div>
@@ -13,6 +13,15 @@
 <script>
 import Card from '@/components/Card.vue'
 export default {
+  data () {
+    return {
+      plans: [
+        { name: 'silver', price: 7.5 },
+        { name: 'gold', price: 12.5 },
+        { name: 'diamond', price: 15 }
+      ]
+    }
+  },
   components: {
     appCard: Card
   }

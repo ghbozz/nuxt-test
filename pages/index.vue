@@ -7,11 +7,11 @@
 
 <script>
 import Banner from '@/components/Banner.vue'
-import Features from '@/components/Features.vue'
+import Plans from '@/components/Plans.vue'
 export default {
   components: {
     appBanner: Banner,
-    appFeatures: Features
+    appFeatures: Plans
   }
 }
 </script>
