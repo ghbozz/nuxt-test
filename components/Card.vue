@@ -15,8 +15,8 @@
 
 <script>
 export default {
-  props: ['plan']
-}
+    props: ['plan']
+  }
 </script>
 
 <style scoped>

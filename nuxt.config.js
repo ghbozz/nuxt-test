@@ -34,15 +34,20 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
+    '@nuxtjs/axios',
     '@nuxtjs/bulma'
   ],
+
+  axios: {
+    // proxyHeaders: false
+  },
   /*
   ** Build configuration
   */

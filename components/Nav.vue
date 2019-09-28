@@ -58,9 +58,9 @@
 </template>
 
 <style>
-  nav {
-    -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
-    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
+  .navbar {
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0) !important;
   }
 </style>

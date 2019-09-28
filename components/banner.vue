@@ -22,7 +22,7 @@ export default {
   .banner {
     display: flex;
     width: 100vw;
-    height: calc(100vh - 52px);
+    height: 100vh;
   }
 
   .banner-left {

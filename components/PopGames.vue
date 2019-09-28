@@ -1,10 +1,10 @@
 <template>
   <section class="section is-medium">
     <div class="container-fluid">
-      <h1 class="title">Pricing</h1>
       <div class="features-background">
+        <h1 class="title">Popular Games</h1>
         <div class="columns is-mobile is-multiline is-vcentered">
-          <div v-for="(plan, i) in plans" :key="i" class="column"><app-card :plan="plan"></app-card></div>
+          <div v-for="(game, i) in games" :key="i" class="column"><app-game-card :game="game"></app-game-card></div>
         </div>
       </div>
     </div>
@@ -12,19 +12,11 @@
 </template>
 
 <script>
-import Card from '@/components/Card.vue'
+import GameCard from '@/components/GameCard.vue'
 export default {
-  data () {
-    return {
-      plans: [
-        { name: 'silver', price: 7.5 },
-        { name: 'gold', price: 12.5 },
-        { name: 'diamond', price: 15 }
-      ]
-    }
-  },
+  props: ['games'],
   components: {
-    appCard: Card
+    appGameCard: GameCard
   }
 }
 </script>
@@ -40,11 +32,6 @@ export default {
   .column {
     display: flex;
     justify-content: center;
-  }
-
-  .columns :nth-child(2) .my-card {
-    width: 380px;
-    height: 530px;
   }
 
   .title {
