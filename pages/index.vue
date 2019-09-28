@@ -20,17 +20,24 @@ export default {
     appPopGames: PopGames
   },
   asyncData ({ params, error }) {
-    return axios.get(`https://api-v3.igdb.com/games/?fields=name,genres.name,cover.url,popularity&order=popularity:desc&expand=genres`)
-    .then((res) => {
-      return {
-        games: res.data.splice(0, 10)
-      }
+    return axios({
+      url: `https://api-v3.igdb.com/games/`,
+      method: "GET",
+      headers: {
+          "Accept": "application/json",
+          "user-key": 'fa1dc1dd2cfc92ea7689a829c8c15124'
+      },
+      data: "fields name,first_release_date,hypes,cover.url,screenshots.url,summary; \nwhere hypes > 50 & first_release_date > 1548679293 & first_release_date < 1569674712;"
     })
-    .catch((e) => {
-      console.log(e)
-      error({ statusCode: 404, message: 'Billet non trouvé' })
-    })
-  }
+      .then(response => {
+        return {
+          games: response.data
+        }
+      })
+      .catch(err => {
+          console.error(err);
+      });
+  },
 }
 </script>
 

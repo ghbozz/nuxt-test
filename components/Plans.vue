@@ -49,7 +49,7 @@ export default {
 
   .title {
     margin-left: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     text-transform: uppercase;
     letter-spacing: .2rem;
   }
