@@ -18,7 +18,7 @@
     position: relative;
     background-size: cover;
     background-position: center;
-    width: 650px;
+    width: 100%;
     height: 400px;
     border-radius: 10px;
   }
@@ -44,5 +44,19 @@
     font-size: 24px;
     background-color: rgba(15,15,15,0.7);
     transition: all .3s ease-out;
+  }
+
+  @media screen and (max-width: 767px) {
+    .card-cover {
+      transform: translate(50%, 50%);
+      right: 50%;
+      bottom: 50%;
+      width: 250px;
+      height: 350px;
+    }
+
+    .card-content {
+      z-index: 2;
+    }
   }
 </style>
