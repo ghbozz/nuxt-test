@@ -21,6 +21,9 @@
     width: 100%;
     height: 400px;
     border-radius: 10px;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
   }
 
   .card-cover {
